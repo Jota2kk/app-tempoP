@@ -1,19 +1,16 @@
-import {useState} from 'react';
+/* eslint-disable react/prop-types */
+import {useEffect, useState} from 'react';
 
 
 
 function Search(props){
 
-    
-
     const [cidade,setCidade] = useState("");
-
 
 
     function searchInput(e){
 
         e.preventDefault();
-
         //setCidade("");
 
         let currentValue = document.querySelector('input[name=searchInput]')
@@ -42,15 +39,11 @@ function Search(props){
 
             if(sys != undefined){
 
-                
-
             if(weather != undefined){
-
-                
 
                 const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
 
-             weather[0]["icon"]}.svg`;
+                weather[0]["icon"]}.svg`;
 
                 setCidade(`
 
@@ -88,9 +81,11 @@ function Search(props){
 
     }
 
+    useEffect(()=> {
+        return alert("Pesquise o nome da cidade em ingles")
+    }, [])
 
-
-    return(
+    return( 
 
         <div className="searchWraper">
 

@@ -1,4 +1,3 @@
-
 import Search from './Search'
 import './App.css'
 
